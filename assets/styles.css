@@ -1,0 +1,54 @@
+body {
+    font-family: 'Roboto Mono', Verdana, sans-serif;
+}
+.container,
+.display-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+.container {
+    background-color: rgb(38, 38, 47);
+    width: 250px;
+    height: 400px;
+    
+}
+.display-div {
+    background-color: rgb(237, 238, 229);
+    width: 220px;
+    height: 300px;
+    margin-top: 30px;
+}
+.subtitle {
+    font-size: 0.8em;
+    margin-top: 40px;
+}
+#user-input,
+.hidden {
+    height: 35px;
+    width: 160px;
+}
+
+#user-input {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+.hidden {
+    visibility: hidden;
+    margin: 10px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.btn-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 200px;
+    margin-top: 20px;
+}
+button {
+    width: 80px;
+    height: 30px;
+    font-family: inherit;
+}
