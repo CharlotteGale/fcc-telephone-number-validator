@@ -1,5 +1,5 @@
 const userInput = document.getElementById('user-input');
-const outputElement = document.getElementById('results');
+const outputElement = document.getElementById('results-div');
 const checkButton = document.getElementById('check-btn');
 const clearButton = document.getElementById('clear-btn');
 
@@ -8,26 +8,21 @@ function validatePhoneNumber(str) {
     return regex.test(str);
 }
 
-const handleCheckButtonClick = (userInput) => {
-    
-    let errorMessage;
+const handleCheckButtonClick = () => {
+    const input = userInput.value;
 
-    if (userInput === '') {
-        errorMessage = 'Please provide a phone number';
-    };
-
-    if (!errorMessage) {
-        const validatedNumber = validatePhoneNumber(userInput);
-        outputElement.innerText = validatedNumber;
-    } else {
-        outputElement.textContent = errorMessage;
-    };
-
-    outputElement.classList.toggle('hidden', !errorMessage)
+    if (input === '') { 
+        alert('Please provide a phone number'); 
+    } else { 
+        const isValid = validatePhoneNumber(input); 
+        outputElement.innerText = isValid ? `Valid US number: ${input}` : `Invalid US number: ${input}`; 
+        outputElement.classList.remove('hidden'); 
+    } 
 }
 
 const handleClearButtonClick = () => {
     outputElement.textContent = '';
+    outputElement.classList.add('hidden')
 }
 
 checkButton.addEventListener("click", handleCheckButtonClick);
