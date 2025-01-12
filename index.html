@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Number Validator</title>
     <link rel="stylesheet" href="/assets/styles.css" >
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
 </head>
 <body>
     <main>
         <div class="container">
-            <input type="number" id="user-input" placeholder="Enter a phone number">
-            <span class="hidden" id="results"></span>
+            <div class="display-div">
+                <p class="subtitle">Enter a Phone Number:</p>
+                <input type="tel" id="user-input">
+                <span class="hidden" id="results"></span>
+            </div>
             <div class="btn-div">
                 <button type="submit" id="check-btn">Check</button>
                 <button type="submit" id="clear-btn">Clear</button>
